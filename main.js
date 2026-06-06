@@ -32,6 +32,68 @@ if (window.matchMedia('(max-width: 640px)').matches) {
   document.body.classList.add('has-callbar');
 }
 
+// Lightbox
+(function(){
+  const lb = document.getElementById('lb');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let items = [], idx = 0;
+
+  function open(arr, i){
+    items = arr; idx = i;
+    show();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+  function show(){
+    lbImg.src = items[idx];
+    lbPrev.style.display = items.length > 1 ? '' : 'none';
+    lbNext.style.display = items.length > 1 ? '' : 'none';
+  }
+
+  lbClose.addEventListener('click', close);
+  lb.addEventListener('click', e => { if(e.target === lb) close(); });
+  lbPrev.addEventListener('click', () => { idx = (idx - 1 + items.length) % items.length; show(); });
+  lbNext.addEventListener('click', () => { idx = (idx + 1) % items.length; show(); });
+  document.addEventListener('keydown', e => {
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft'){ idx = (idx - 1 + items.length) % items.length; show(); }
+    if(e.key === 'ArrowRight'){ idx = (idx + 1) % items.length; show(); }
+  });
+
+  // Галерея
+  const gLinks = [...document.querySelectorAll('.gallery .ph')];
+  const gUrls = gLinks.map(a => a.href);
+  gLinks.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); open(gUrls, i); }));
+
+  // Фото майстрів
+  document.querySelectorAll('.master .pic').forEach(pic => {
+    const img = pic.querySelector('img');
+    if(!img) return;
+    pic.style.cursor = 'pointer';
+    pic.addEventListener('click', () => open([img.src.replace('w_600','w_1200')], 0));
+  });
+
+  // Відео — повноекранний режим
+  const vid = document.querySelector('.prostir-video-wrap video');
+  if(vid){
+    vid.style.cursor = 'pointer';
+    vid.title = 'Натисніть для перегляду на весь екран';
+    vid.addEventListener('click', () => {
+      if(vid.requestFullscreen) vid.requestFullscreen();
+      else if(vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+    });
+  }
+})();
+
 // Наш простір — polaroid slideshow
 document.querySelectorAll('[data-prostir-slide]').forEach((shots, i) => {
   const photos = shots.querySelectorAll('.pshot');
