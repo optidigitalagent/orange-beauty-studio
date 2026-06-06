@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Orange Beauty Studio — салон краси у Запоріжжі</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737873/orange-beauty/logo.jpg" />
+<meta name="description" content="Orange Beauty Studio — салон краси у Запоріжжі. Манікюр, педикюр. Ваша краса — наше мистецтво. Запис: +38 (098) 500-30-02" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Mobile header fix: brand text overflow ── */
+@media (max-width: 767px) {
+  .hdr-in {
+    gap: 6px;
+  }
+  .brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .brand > span:last-child {
+    font-size: clamp(12px, 3.5vw, 16px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .brand small {
+    display: none; /* приховуємо "studio · Запоріжжя" — залишаємо тільки назву */
+  }
+  .hdr-cta .hdr-phone {
+    display: none; /* номер телефону прибрано з хедера на мобайлі */
+  }
+  .hdr-cta .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .brand .mark {
+    width: 36px;
+    height: 36px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="#top" class="brand" aria-label="Orange Beauty Studio">
+      <span class="mark"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737873/orange-beauty/logo.jpg" alt="Orange Beauty Studio" /></span>
+      <span>Orange Beauty<small>studio · Запоріжжя</small></span>
+    </a>
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#services">Послуги</a>
+      <a href="#prostir">Простір</a>
+      <a href="#price">Прайс</a>
+      <a href="#masters">Майстри</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-phone" href="tel:+380985003002">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        098 500-30-02
+      </a>
+      <a class="btn btn-primary" href="#contacts">Записатись</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mnav" id="mnav">
+  <div class="mnav-top">
+    <span class="brand"><span class="mark"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737873/orange-beauty/logo.jpg" alt="Orange Beauty Studio" /></span><span>Orange Beauty</span></span>
+    <button class="mnav-close" id="mnavClose" aria-label="Закрити">&times;</button>
+  </div>
+  <nav class="mnav-links">
+    <a href="#services">Послуги</a>
+    <a href="#prostir">Простір</a>
+    <a href="#price">Прайс</a>
+    <a href="#masters">Майстри</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#reviews">Відгуки</a>
+    <a href="#contacts">Контакти</a>
+  </nav>
+  <div class="mnav-foot">
+    <a class="btn btn-primary" href="tel:+380985003002">Зателефонувати</a>
+    <a class="btn btn-soft" href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</div>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Салон краси · вул. Абрагама Коопа 15</span>
+      <h1 class="reveal" data-d="1">Ваша краса —<br><em>наше мистецтво</em></h1>
+      <p class="hero-sub reveal" data-d="2">Затишний салон у Запоріжжі, куди хочеться повертатись. Якісний сервіс, приємна атмосфера та чесні ціни — без переплати за пафос.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn btn-primary" href="#contacts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Записатись на візит
+        </a>
+        <a class="btn btn-ghost" href="#price">Дивитись прайс</a>
+      </div>
+      <div class="hero-meta reveal" data-d="4">
+        <div class="item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><span class="lbl">Графік роботи</span><span class="val">Пн–Нд · 9:00–20:00</span></span>
+        </div>
+        <div class="item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><span class="lbl">Адреса</span><span class="val">Запоріжжя, Абрагама Коопа 15</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art reveal" data-d="2">
+      <div class="hero-badge">
+        <div>
+          <span class="stars">★★★★★</span>
+          <b>5,0</b>
+          <span>понад 50 відгуків</span>
+        </div>
+      </div>
+      <div class="photo"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737863/orange-beauty/IMG_1109.JPG.jpg" alt="Манікюр — робота Orange Beauty Studio" /></div>
+      <div class="photo-2"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737869/orange-beauty/IMG_1597.jpg" alt="Дизайн нігтів — Orange Beauty Studio" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Що ми робимо</span>
+      <h2 class="sec-title">Повний догляд за красою — в одному місці</h2>
+      <p class="sec-lead">Манікюр, педикюр, депіляція, стрижки та догляд. Усе, заради чого варто завітати, — від щоденного догляду до особливого образу.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal" data-d="1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 11V6a1.5 1.5 0 0 1 3 0v5"/><path d="M15 11V7.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a7 7 0 0 1-6.4-4.2L4 14a1.5 1.5 0 0 1 2.7-1.3L8 15"/><path d="M9 11V8.5a1.5 1.5 0 0 0-3 0V13"/></svg></span>
+        <h3>Манікюр і нігті</h3>
+        <p>Комбінований манікюр, гель-лак, камуфляжна база, нарощування та корекція. Дизайн на будь-який смак.</p>
+        <div class="tags"><span>гель-лак</span><span>нарощування</span><span>дизайн</span></div>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4c-1.5 2-2 4-2 7 0 3 1 5 3 6s4 1 6 0c1.2-.6 2-1.6 2-3 0-1.2-.8-2-2-2.2"/><circle cx="7" cy="6" r="1"/><circle cx="10" cy="5" r="1"/><circle cx="13" cy="6" r="1"/><circle cx="15" cy="8.5" r="1"/></svg></span>
+        <h3>Педикюр</h3>
+        <p>Доглянуті стопи й пальці, стійке покриття. Акуратно, гігієнічно та з турботою про комфорт.</p>
+        <div class="tags"><span>стопи</span><span>покриття</span><span>догляд</span></div>
+      </article>
+      <article class="svc reveal" data-d="3">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2.5 3.5 5 6.8 5 10a5 5 0 0 1-10 0c0-3.2 2.5-6.5 5-10z"/></svg></span>
+        <h3>Шугаринг і депіляція</h3>
+        <p>Цукрова паста та віск. Усі зони — від обличчя до глибокого бікіні. Мінімум дискомфорту, гладкий результат.</p>
+        <div class="tags"><span>цукор</span><span>віск</span><span>усі зони</span></div>
+      </article>
+      <article class="svc reveal" data-d="1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 8.6 21 21M8.6 15.4 21 3"/></svg></span>
+        <h3>Стрижки</h3>
+        <p>Жіночі та чоловічі стрижки. Форма, що пасує саме вам, і охайний фінал з укладкою.</p>
+        <div class="tags"><span>жіночі</span><span>чоловічі</span></div>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6 6 4.5 4.5M19.5 19.5 18 18M6 18l-1.5 1.5M19.5 4.5 18 6"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <h3>Косметологія і масаж</h3>
+        <p>Доглядові процедури для обличчя та розслаблюючий масаж. Турбота про себе, на яку завжди бракує часу.</p>
+        <div class="tags"><span>догляд</span><span>масаж</span></div>
+      </article>
+      <article class="svc reveal" data-d="3" style="display:flex;flex-direction:column;justify-content:center;background:var(--accent-soft);border-color:transparent;">
+        <h3 style="margin-bottom:8px;">Не знаєте, що обрати?</h3>
+        <p style="margin-bottom:20px;">Напишіть нам — підкажемо послугу та запишемо на зручний час.</p>
+        <a class="btn btn-primary" href="#contacts" style="align-self:flex-start;">Поставити питання</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ НАШ ПРОСТІР ============ -->
+<section class="prostir" id="prostir">
+  <video class="prostir-video" autoplay muted loop playsinline preload="none">
+    <source src="https://res.cloudinary.com/djntd8got/video/upload/f_auto,q_auto/v1780737886/orange-beauty/prostir.mp4" type="video/mp4">
+  </video>
+  <div class="prostir-overlay"></div>
+  <div class="wrap">
+    <div class="prostir-intro reveal">
+      <span class="eyebrow-light">Про нас</span>
+      <h2>Наш простір</h2>
+      <p>Тут кожна деталь продумана для вашого комфорту. Атмосфера затишного салону, де можна розслабитись, довіритись майстру і вийти оновленою — з красивими нігтями і гарним настроєм.</p>
+    </div>
+    <div class="prostir-grid">
+
+      <!-- Card 1 -->
+      <div class="pcard-wrap reveal" data-d="1">
+        <div class="pcard-frame">
+          <div class="pcard-deco pcd-1"></div>
+          <div class="pcard-deco pcd-2"></div>
+          <div class="pcard-inner">
+            <div class="pcard-shots" data-prostir-slide>
+              <img class="pshot active" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737877/orange-beauty/prostir_IMG_1851.jpg" alt="Затишна атмосфера — Orange Beauty Studio" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737878/orange-beauty/prostir_IMG_1853.jpg" alt="Салон краси Orange Beauty Studio" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737879/orange-beauty/prostir_IMG_1854.jpg" alt="Інтер'єр салону Orange Beauty Studio" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="pcard-dots" data-prostir-dots>
+          <span class="pcard-dot active"></span>
+          <span class="pcard-dot"></span>
+          <span class="pcard-dot"></span>
+        </div>
+        <h3 class="pcard-title">Затишна атмосфера</h3>
+        <p class="pcard-desc">Простір, де кожна деталь продумана для вашого комфорту і натхнення</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pcard-wrap reveal" data-d="2">
+        <div class="pcard-frame">
+          <div class="pcard-deco pcd-1"></div>
+          <div class="pcard-deco pcd-2"></div>
+          <div class="pcard-inner">
+            <div class="pcard-shots" data-prostir-slide>
+              <img class="pshot active" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737879/orange-beauty/prostir_IMG_1855.jpg" alt="Нігтьовий дизайн — Orange Beauty Studio" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737881/orange-beauty/prostir_IMG_1856.jpg" alt="Манікюр з дизайном" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737882/orange-beauty/prostir_IMG_1857.jpg" alt="Авторський дизайн нігтів" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="pcard-dots" data-prostir-dots>
+          <span class="pcard-dot active"></span>
+          <span class="pcard-dot"></span>
+          <span class="pcard-dot"></span>
+        </div>
+        <h3 class="pcard-title">Нігтьовий дизайн</h3>
+        <p class="pcard-desc">Майстерність у кожному штриху — від класики до авторського дизайну</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pcard-wrap reveal" data-d="1">
+        <div class="pcard-frame">
+          <div class="pcard-deco pcd-1"></div>
+          <div class="pcard-deco pcd-2"></div>
+          <div class="pcard-inner">
+            <div class="pcard-shots" data-prostir-slide>
+              <img class="pshot active" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737882/orange-beauty/prostir_IMG_1859.jpg" alt="Кольорові рішення — Orange Beauty Studio" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737883/orange-beauty/prostir_IMG_1860.jpg" alt="Яскравий манікюр" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737884/orange-beauty/prostir_IMG_1875.jpg" alt="Кольоровий дизайн нігтів" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="pcard-dots" data-prostir-dots>
+          <span class="pcard-dot active"></span>
+          <span class="pcard-dot"></span>
+          <span class="pcard-dot"></span>
+        </div>
+        <h3 class="pcard-title">Кольорові рішення</h3>
+        <p class="pcard-desc">Нескінченна палітра відтінків для вашого унікального образу</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pcard-wrap reveal" data-d="2">
+        <div class="pcard-frame">
+          <div class="pcard-deco pcd-1"></div>
+          <div class="pcard-deco pcd-2"></div>
+          <div class="pcard-inner">
+            <div class="pcard-shots" data-prostir-slide>
+              <img class="pshot active" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737879/orange-beauty/prostir_IMG_1854.jpg" alt="Французький манікюр — Orange Beauty Studio" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737882/orange-beauty/prostir_IMG_1857.jpg" alt="Елегантний манікюр" loading="lazy" />
+              <img class="pshot" src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737884/orange-beauty/prostir_IMG_1875.jpg" alt="Стильний дизайн нігтів" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="pcard-dots" data-prostir-dots>
+          <span class="pcard-dot active"></span>
+          <span class="pcard-dot"></span>
+          <span class="pcard-dot"></span>
+        </div>
+        <h3 class="pcard-title">Французький манікюр</h3>
+        <p class="pcard-desc">Елегантність у кожній лінії. Стиль, що говорить без слів</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE ============ -->
+<section class="sec sec-warm" id="price">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Прозорі ціни</span>
+      <h2 class="sec-title">Прайс-лист</h2>
+      <p class="sec-lead">Жодних прихованих доплат. Дивіться вартість одразу — і записуйтесь.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal" data-d="1">
+        <div class="ph">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V11M12 11V6a1.5 1.5 0 0 1 3 0v5M15 11V7.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a7 7 0 0 1-6.4-4.2L4 14a1.5 1.5 0 0 1 2.7-1.3L8 15M9 11V8.5a1.5 1.5 0 0 0-3 0V13"/></svg></span>
+          <h3>Манікюр</h3>
+        </div>
+        <div class="prow"><span class="nm">Манікюр комбінований</span><span class="dots"></span><span class="pr">300 ₴</span></div>
+        <div class="prow"><span class="nm">Манікюр + гель-лак</span><span class="dots"></span><span class="pr">600 ₴</span></div>
+        <div class="prow"><span class="nm">Манікюр + камуфляжна база</span><span class="dots"></span><span class="pr">550 ₴</span></div>
+        <div class="prow"><span class="nm">Нарощування нігтів</span><span class="dots"></span><span class="pr">700–1100 ₴</span></div>
+        <div class="prow"><span class="nm">Корекція нарощених</span><span class="dots"></span><span class="pr">650–900 ₴</span></div>
+        <div class="prow"><span class="nm">Чоловічий манікюр</span><span class="dots"></span><span class="pr">300 ₴</span></div>
+      </div>
+      <div class="price-card reveal" data-d="2">
+        <div class="ph">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4c-1.5 2-2 4-2 7 0 3 1 5 3 6s4 1 6 0c1.2-.6 2-1.6 2-3 0-1.2-.8-2-2-2.2"/><circle cx="7" cy="6" r="1"/><circle cx="10" cy="5" r="1"/><circle cx="13" cy="6" r="1"/><circle cx="15" cy="8.5" r="1"/></svg></span>
+          <h3>Педикюр</h3>
+        </div>
+        <div class="prow"><span class="nm">Педикюр (стопи)</span><span class="dots"></span><span class="pr">250 ₴</span></div>
+        <div class="prow"><span class="nm">Педикюр (пальці)</span><span class="dots"></span><span class="pr">250 ₴</span></div>
+        <div class="prow"><span class="nm">Покриття нігтів</span><span class="dots"></span><span class="pr">200 ₴</span></div>
+        <div class="prow"><span class="nm">Чоловічий педикюр</span><span class="dots"></span><span class="pr">700 ₴</span></div>
+      </div>
+    </div>
+    <p class="price-note reveal">Маєте питання щодо послуг — <a href="#contacts">звертайтесь до нас</a>.</p>
+  </div>
+</section>
+
+<!-- ============ MASTERS ============ -->
+<section class="sec" id="masters">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Наша команда</span>
+      <h2 class="sec-title">Майстри, яким довіряють</h2>
+      <p class="sec-lead">Невелика команда, яка любить свою справу. Уважні до деталей, акуратні та завжди на вашому боці.</p>
+    </div>
+    <div class="masters">
+      <article class="master reveal" data-d="1">
+        <div class="pic"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737874/orange-beauty/master_1.jpg" alt="Вікторія — майстер манікюру та педикюру" /><span class="tag">Манікюр · педикюр</span></div>
+        <h3>Вікторія</h3>
+        <p>Майстер манікюру та педикюру. Витончені роботи, бездоганна охайність і увага до кожної деталі.</p>
+      </article>
+      <article class="master reveal" data-d="2">
+        <div class="pic"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737875/orange-beauty/master_2.jpg" alt="Аміна — майстер манікюру та педикюру" /><span class="tag">Манікюр · педикюр</span></div>
+        <h3>Аміна</h3>
+        <p>Майстер манікюру та педикюру. Уважна до деталей, завжди підбере покриття та дизайн саме для вас.</p>
+      </article>
+      <article class="master reveal" data-d="3">
+        <div class="pic"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737876/orange-beauty/master_3.jpg" alt="Євгенія — майстер манікюру та педикюру" /><span class="tag">Манікюр · педикюр</span></div>
+        <h3>Євгенія</h3>
+        <p>Майстер манікюру та педикюру. Бездоганна точність і широкий репертуар дизайнів — від мінімалізму до арт-деко.</p>
+      </article>
+      <article class="master reveal" data-d="1">
+        <div class="pic"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_600/v1780737876/orange-beauty/master_4.jpg" alt="Аміна — майстер манікюру та педикюру" /><span class="tag">Манікюр · педикюр</span></div>
+        <h3>Аміна</h3>
+        <p>Майстер манікюру та педикюру. Точна робота і теплий підхід до кожного клієнта.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="sec sec-warm" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Галерея робіт</span>
+      <h2 class="sec-title">Реальні роботи наших майстрів</h2>
+      <p class="sec-lead">Жодних стоків — лише те, що ми зробили для наших клієнток.</p>
+    </div>
+    <div class="gallery reveal">
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737857/orange-beauty/IMG_0221.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737857/orange-beauty/IMG_0221.jpg" alt="Манікюр — Orange Beauty Studio" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737858/orange-beauty/IMG_0455.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737858/orange-beauty/IMG_0455.JPG.jpg" alt="Дизайн нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737859/orange-beauty/IMG_0644.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737859/orange-beauty/IMG_0644.jpg" alt="Манікюр з покриттям" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737859/orange-beauty/IMG_0686.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737859/orange-beauty/IMG_0686.jpg" alt="Гель-лак" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737860/orange-beauty/IMG_0729.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737860/orange-beauty/IMG_0729.jpg" alt="Авторський дизайн нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737861/orange-beauty/IMG_0799.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737861/orange-beauty/IMG_0799.jpg" alt="Манікюр — робота майстра" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737861/orange-beauty/IMG_0842.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737861/orange-beauty/IMG_0842.JPG.jpg" alt="Нігтьовий дизайн" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737862/orange-beauty/IMG_0942.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737862/orange-beauty/IMG_0942.jpg" alt="Манікюр Orange Beauty Studio" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737863/orange-beauty/IMG_1109.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737863/orange-beauty/IMG_1109.JPG.jpg" alt="Стильний манікюр" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737864/orange-beauty/IMG_1179.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737864/orange-beauty/IMG_1179.JPG.jpg" alt="Дизайн нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737865/orange-beauty/IMG_1230.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737865/orange-beauty/IMG_1230.jpg" alt="Манікюр з дизайном" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737866/orange-beauty/IMG_1252.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737866/orange-beauty/IMG_1252.jpg" alt="Покриття нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737867/orange-beauty/IMG_1260.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737867/orange-beauty/IMG_1260.jpg" alt="Манікюр — майстри Orange Beauty Studio" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737867/orange-beauty/IMG_1321.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737867/orange-beauty/IMG_1321.jpg" alt="Нарощування нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737868/orange-beauty/IMG_1374.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737868/orange-beauty/IMG_1374.jpg" alt="Гель-лак з дизайном" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737869/orange-beauty/IMG_1583.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737869/orange-beauty/IMG_1583.jpg" alt="Манікюр Orange Beauty Studio" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737869/orange-beauty/IMG_1597.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737869/orange-beauty/IMG_1597.jpg" alt="Дизайн нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737870/orange-beauty/IMG_1642.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737870/orange-beauty/IMG_1642.jpg" alt="Авторський манікюр" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737871/orange-beauty/IMG_1729.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737871/orange-beauty/IMG_1729.JPG.jpg" alt="Стильний дизайн нігтів" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737871/orange-beauty/IMG_1771.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737871/orange-beauty/IMG_1771.JPG.jpg" alt="Манікюр — якісна робота" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737872/orange-beauty/IMG_1820.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737872/orange-beauty/IMG_1820.JPG.jpg" alt="Манікюр Orange Beauty Studio" loading="lazy" /></a>
+      <a class="ph" href="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737872/orange-beauty/IMG_1863.JPG.jpg" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto,w_800/v1780737872/orange-beauty/IMG_1863.JPG.jpg" alt="Дизайн нігтів від майстра" loading="lazy" /></a>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a class="btn btn-soft" href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Більше робіт в Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Відгуки</span>
+      <h2 class="sec-title">Що кажуть наші клієнтки</h2>
+    </div>
+    <div class="rev-grid">
+      <figure class="rev feat reveal" data-d="1">
+        <span class="stars">★★★★★</span>
+        <blockquote class="quote">«Неймовірно задоволена! Женя зробила ідеальний манікюр. Атмосфера в салоні просто чарівна 🧡»</blockquote>
+        <figcaption class="who"><span class="av">О</span><span><b>Оксана К.</b><span>квітень 2025</span></span></figcaption>
+      </figure>
+      <figure class="rev reveal" data-d="2">
+        <span class="stars">★★★★★</span>
+        <blockquote class="quote">«Вперше на шугаринг — не боляче, результат чудовий. Аміна — справжній профі!»</blockquote>
+        <figcaption class="who"><span class="av">М</span><span><b>Марина Т.</b><span>березень 2025</span></span></figcaption>
+      </figure>
+      <figure class="rev reveal" data-d="3">
+        <span class="stars">★★★★★</span>
+        <blockquote class="quote">«Orange Beauty — моє улюблене місце. Чистота, комфорт та неперевершена якість!»</blockquote>
+        <figcaption class="who"><span class="av">В</span><span><b>Вікторія Р.</b><span>травень 2025</span></span></figcaption>
+      </figure>
+      <figure class="rev reveal" data-d="1">
+        <span class="stars">★★★★★</span>
+        <blockquote class="quote">«Зробила нарощування вперше — в захваті! Нігті виглядають натурально та красиво.»</blockquote>
+        <figcaption class="who"><span class="av">Д</span><span><b>Дарина М.</b><span>лютий 2025</span></span></figcaption>
+      </figure>
+      <figure class="rev reveal" data-d="2">
+        <span class="stars">★★★★★</span>
+        <blockquote class="quote">«Євгенія зробила стрижку мрії. Приємна атмосфера, уважний персонал — топ!»</blockquote>
+        <figcaption class="who"><span class="av">А</span><span><b>Аліна Г.</b><span>січень 2025</span></span></figcaption>
+      </figure>
+      <figure class="rev reveal" data-d="3" style="justify-content:center;align-items:flex-start;background:var(--accent-soft);border-color:transparent;">
+        <blockquote class="quote" style="font-style:normal;font-size:21px;">Ваш відгук може бути наступним.</blockquote>
+        <a class="btn btn-primary" href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">Залишити відгук</a>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="sec cta-band">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <h2>Готові до перетворення?</h2>
+      <p>Напишіть нам у зручний месенджер або зателефонуйте — підберемо час і відповімо на всі питання.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="tel:+380985003002">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          098 500-30-02
+        </a>
+        <a class="btn btn-ghost" href="https://t.me/orange_beautystudio" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn-ghost" href="viber://chat?number=+380985003002">Viber</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="sec sec-warm" id="contacts">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Контакти і запис</span>
+        <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,42px);">Завітайте до нас</h2>
+        <div class="cinfo-list">
+          <div class="cinfo">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><span class="lbl">Адреса</span><span class="val">Запоріжжя, вул. Абрагама Коопа 15</span></span>
+          </div>
+          <div class="cinfo">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span class="lbl">Телефон</span><span class="val"><a href="tel:+380985003002">+38 (098) 500-30-02</a></span></span>
+          </div>
+          <div class="cinfo">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><span class="lbl">Графік роботи</span><span class="val">Понеділок–Неділя · 9:00–20:00</span></span>
+          </div>
+          <div class="cinfo">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6.5L22 7"/></svg></span>
+            <span><span class="lbl">Email</span><span class="val"><a href="mailto:orangebeautystudiolev@gmail.com">orangebeautystudiolev@gmail.com</a></span></span>
+          </div>
+        </div>
+        <div class="messengers">
+          <a class="msg-btn" href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a class="msg-btn" href="https://t.me/orange_beautystudio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.3 18.6 20.06c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.97 6.4c.4-.36-.09-.56-.63-.2L6.42 13.13l-4.98-1.56c-1.08-.34-1.1-1.08.23-1.6l19.46-7.5c.9-.34 1.69.2 1.4 1.43z"/></svg>
+            Telegram
+          </a>
+          <a class="msg-btn" href="viber://chat?number=+380985003002">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.9 2 3 5.2 3 9.6c0 2.3 1.1 4.3 2.9 5.7v3.4l3-1.7c.97.2 2 .3 3.1.3 5.1 0 9-3.2 9-7.7S17.1 2 12 2zm5 9.5c-.2.5-1 1-1.6 1.1-.4.1-1 .1-3-.8-2.5-1.1-4.1-3.7-4.2-3.9-.1-.2-1-1.3-1-2.5s.6-1.7.8-2c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3-.1.5.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.4.1.5-.1l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.3.1.2.1.6-.1 1z"/></svg>
+            Viber
+          </a>
+        </div>
+      </div>
+      <div class="map-wrap reveal" data-d="1">
+        <iframe title="Orange Beauty Studio на карті" src="https://maps.google.com/maps?q=%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B6%D0%B6%D1%8F%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%86%D1%81%D1%82%D0%BE%D0%BC%D1%96%D0%BD%D0%B0%2015&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand"><span class="mark"><img src="https://res.cloudinary.com/djntd8got/image/upload/f_auto,q_auto/v1780737873/orange-beauty/logo.jpg" alt="Orange Beauty Studio" /></span><span>Orange Beauty<small>studio · Запоріжжя</small></span></span>
+        <p>Ваша краса — наше мистецтво. Затишний салон краси у Запоріжжі з якісним сервісом і чесними цінами.</p>
+        <div class="foot-soc">
+          <a href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://t.me/orange_beautystudio" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.3 18.6 20.06c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.13L17.97 6.4c.4-.36-.09-.56-.63-.2L6.42 13.13l-4.98-1.56c-1.08-.34-1.1-1.08.23-1.6l19.46-7.5c.9-.34 1.69.2 1.4 1.43z"/></svg></a>
+          <a href="tel:+380985003002" aria-label="Телефон"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="#services">Послуги</a></li>
+          <li><a href="#prostir">Наш простір</a></li>
+          <li><a href="#price">Прайс</a></li>
+          <li><a href="#masters">Майстри</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#reviews">Відгуки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul>
+          <li><a href="tel:+380985003002">+38 (098) 500-30-02</a></li>
+          <li><a href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">@orange.beautystudio</a></li>
+          <li><a href="mailto:orangebeautystudiolev@gmail.com">orangebeautystudiolev@gmail.com</a></li>
+          <li><a href="https://maps.google.com/maps?q=Запоріжжя+вулиця+Абрагама+Коопа+15" target="_blank" rel="noopener">вул. Абрагама Коопа 15, Запоріжжя</a></li>
+          <li>Пн–Нд · 9:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2025 Orange Beauty Studio</span>
+      <span>Ваша краса — наше мистецтво</span>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile call bar -->
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+380985003002">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Подзвонити
+  </a>
+  <a class="btn btn-soft" href="https://instagram.com/orange.beautystudio" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<!-- Tweaks panel mount -->
+<div id="tweaks-root"></div>
+
+<script src="main.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>
